@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NewCompComponent } from './new-comp/new-comp.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [NewCompComponent],
+  template: `
+    <h1>Marvellous Infosystems</h1>
+    <textarea placeholder="Enter your feedback here"></textarea>
+    <app-new-comp></app-new-comp>
+  `,
+  styles: ['h1 {color:blue;}']
 })
 export class AppComponent {
   title = 'AngularAssignment6';
